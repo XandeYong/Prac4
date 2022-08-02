@@ -4,7 +4,9 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
+import androidx.core.graphics.toColor
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +22,12 @@ class MainActivity : AppCompatActivity() {
         val boxFourText = findViewById<TextView>(R.id.boxFour)
         val boxFiveText = findViewById<TextView>(R.id.boxFive)
 
+        val mainLayout = findViewById<View>(R.id.mainLayout)
+
+
         val clickableView: List<View> =
             listOf(
-                boxOneText, boxTwoText, boxThreeText, boxFourText, boxFiveText
+                boxOneText, boxTwoText, boxThreeText, boxFourText, boxFiveText, mainLayout
             )
 
         for (item in clickableView) {
